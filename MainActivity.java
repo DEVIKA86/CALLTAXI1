@@ -1,66 +1,65 @@
-package in.wptrafficanalyzer.locationattouchedpositionv2;
+package com.example.locationplacedetailsv2;
 
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.os.Build;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+public class MainActivity extends ActionBarActivity {
 
-public class MainActivity extends FragmentActivity {	
-	
-	GoogleMap  googleMap;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		SupportMapFragment supportMapFragment = (SupportMapFragment) 
-							getSupportFragmentManager().findFragmentById(R.id.map);
-		
-		// Getting a reference to the map
-		googleMap = supportMapFragment.getMap();
-		
-		// Setting a click event handler for the map 
-		googleMap.setOnMapClickListener(new OnMapClickListener() {
-			
-			@Override
-			public void onMapClick(LatLng latLng) {
-				
-				// Creating a marker
-				MarkerOptions markerOptions = new MarkerOptions();
-				
-				// Setting the position for the marker
-				markerOptions.position(latLng);
-				
-				// Setting the title for the marker. 
-				// This will be displayed on taping the marker
-				markerOptions.title(latLng.latitude + " : " + latLng.longitude);
-				
-				// Clears the previously touched position
-				googleMap.clear();
-				
-				// Animating to the touched position                				
-				googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-				
-				// Placing a marker on the touched position
-				googleMap.addMarker(markerOptions);
-				
-			}
-		});
-		
-		
-	}
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new PlaceholderFragment())
+                    .commit();
+        }
+    }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            return rootView;
+        }
+    }
+
 }
