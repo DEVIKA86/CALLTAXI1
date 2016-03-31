@@ -1,0 +1,490 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    tools:context="com.example.calltaxi.Booking" >
+<ScrollView
+   
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+    
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center" >
+
+        
+
+      <TextView
+                android:id="@+id/activity_mywallet_transationtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           
+                      android:text="TAXI BOOKING"
+                      android:textSize="18dp"
+                      android:textStyle="italic"
+                />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+       >
+ <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Name:"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+       
+
+    
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+     <EditText
+            android:id="@+id/txt_city1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            
+               android:hint="Name"
+                android:gravity="center"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+        </TableRow>
+        <TableRow
+        android:id="@+id/tableRow15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow8"
+        android:layout_marginTop="10dp"
+       >
+      <Spinner
+                android:id="@+id/activity_source"
+               android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+             
+                android:background="@drawable/topbck"
+          
+                android:popupBackground="@drawable/spinpopup" />
+     </TableRow>
+   <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow4"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="From To"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        >
+      <Spinner
+                android:id="@+id/activity_degination"
+               android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+             
+                android:background="@drawable/topbck"
+             android:entries="@array/cat"
+                android:popupBackground="@drawable/spinpopup" />
+        </TableRow>
+        <TableRow
+        android:id="@+id/tableRow20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow7"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center" >
+          <Button
+            android:id="@+id/activityoamt"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+              android:layout_gravity="center" 
+          
+        
+            android:background="@android:color/holo_blue_light"
+       
+            android:text="AMOUNT"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </TableRow>
+        <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow20"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="AMOUNT"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+      <EditText
+            android:id="@+id/txt_experience"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            
+               android:hint="Amount"
+                android:gravity="center"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+        </TableRow>
+     <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow4"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Driver Name:"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+         >
+      <Spinner
+                android:id="@+id/activity_driver"
+               android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+             
+                android:background="@drawable/topbck"
+             android:entries="@array/cat"
+                android:popupBackground="@drawable/spinpopup" />
+        </TableRow>
+         <TableRow
+        android:id="@+id/tableRow23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow4"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Member:"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+    <Spinner
+                android:id="@+id/activity_taximember"
+               android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+             
+                android:background="@drawable/topbck"
+             android:entries="@array/members"
+                android:popupBackground="@drawable/spinpopup" />
+        </TableRow>
+         <TableRow
+        android:id="@+id/tableRow12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow4"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Taxi Name:"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+   <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+               android:hint="Taxiname"
+            android:layout_marginStart="10dp"
+           
+            android:ems="10"
+             android:gravity="center"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>        </TableRow>
+        <TableRow
+        android:id="@+id/tableRow18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow13"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Amount"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+         <TableRow
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow18"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Taxi Phone"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+    <EditText
+            android:id="@+id/txt_amount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+               android:hint="Phoneno"
+            android:layout_marginStart="10dp"
+           
+            android:ems="10"
+             android:gravity="center"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+        </TableRow>
+        
+    <TableRow
+        android:id="@+id/tableRow21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow17"
+          android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+         >
+<TextView
+                android:id="@+id/txt10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        android:gravity="center"
+                  android:textColor="#0074a9"
+           android:layout_marginStart="5dp"
+                      android:text="Taxi Number"
+                      android:textSize="18dp"
+                      android:textStyle="italic"></TextView>
+      
+
+       
+        
+    </TableRow>
+    
+    
+    
+     <TableRow
+        android:id="@+id/tableRow22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow21"
+        android:layout_marginTop="5dp"
+        android:gravity="center" >
+    <EditText
+            android:id="@+id/txt_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+               android:hint="Taxi Nuber"
+            android:layout_marginStart="10dp"
+           
+            android:ems="10"
+             android:gravity="center"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+        </TableRow>
+    
+          <TableRow
+        android:id="@+id/tableRow14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableRow22"
+        android:layout_marginTop="15dp"
+        android:gravity="center" >
+          <Button
+            android:id="@+id/activityokdialog"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            
+          
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:text="BOOKING"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </TableRow>
+   </LinearLayout>
+   </ScrollView>
+   
+</RelativeLayout>
